@@ -9,7 +9,7 @@ public class Aranjament<K> extends  Permutare<K>{
 
     public Aranjament(ArrayList<K> data,int m){
         super( data);
-
+        this.m=m;
         ArrayList<K> permutare=new ArrayList<>();
 
         for(int i=0;i<m;i++){
@@ -18,8 +18,9 @@ public class Aranjament<K> extends  Permutare<K>{
         super.setPermutare(permutare);
     }
 
+    @Override
     protected boolean solutie(int k){
-       return k==m-1;
+       return k==this.m-1;
     }
 
 
