@@ -7,11 +7,13 @@ public class ProdusCartezian2<K>{
     protected ArrayList<K> multime1;
     protected ArrayList<K> multime2;
     protected ArrayList<K> produs;
+    protected ArrayList<ArrayList<K>> solutie;
 
 
     public ProdusCartezian2(ArrayList<K> multime1,ArrayList<K> multime2){
         this.multime1=multime1;
         this.multime2=multime2;
+        this.solutie=new ArrayList<>();
         produs=new ArrayList<>();
         produs.add(null);
         produs.add(null);
@@ -31,6 +33,7 @@ public class ProdusCartezian2<K>{
 
     protected void tipareste(){
         System.out.println("{"+produs.get(0)+","+produs.get(1)+"}");
+        this.solutie.add(produs);
     }
 
 
@@ -57,5 +60,9 @@ public class ProdusCartezian2<K>{
 
         }
 
+    }
+
+    public ArrayList<ArrayList<K>> getSolutie(){
+        return solutie;
     }
 }
